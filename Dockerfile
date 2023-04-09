@@ -18,8 +18,7 @@ RUN apt-get update -y && \
 RUN pip install openai
 RUN pip install discord.py
 RUN pip install "discord.py[voice]"
-# RUN pip install youtube_dl==2021.12.17 # youtube_dl has not been updated in a while, so it is not compatible with the
-# latest version of discord.py
+# RUN pip install youtube_dl==2021.12.17 # youtube_dl has not been updated in a while so it doesn't work well
 RUN pip install yt-dlp
 
 ENTRYPOINT ["python3 ./bot/bot.py"]
